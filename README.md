@@ -11,7 +11,7 @@ const io = require('socket.io')(http);
 const socket.io-chat = require('socket.io-chat');
 const Chat = new socket.io-chat.Chat({
   file: "./chat.json"
-} // options that will be always the same, {
+} // options that always will be the same, {
   messageLimit: 200, // Limit of characters of a message
 } // options that can be defined and overwrited for each single request);
 
