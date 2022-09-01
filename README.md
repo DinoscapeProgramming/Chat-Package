@@ -29,4 +29,22 @@ socket.on("createRoom", (options) => {
 });
 ```
 
+### Edit Room
+```js
+socket.on("editRoom", (options) => {
+  Chat.rooms({
+    messageLimit: 300 // other options you can use to overwrite the options of the class
+  }).edit(socket.id, options, { messageLimit: 100 } // this options can overwrite the other options);
+});
+```
+
+### Delete Room
+```js
+socket.on("deleteRoom", (options) => {
+  Chat.rooms({
+    messageLimit: 300 // other options you can use to overwrite the options of the class
+  }).delete(socket.id, options, { messageLimit: 100 } // this options can overwrite the other options);
+});
+```
+
 
