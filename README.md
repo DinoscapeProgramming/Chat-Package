@@ -13,7 +13,8 @@ const Chat = new socket.io-chat.Chat({
   file: "./chat.json"
 } // options that always will be the same, {
   messageCharacterLimit: 200, // Limit of characters of a message
-  roomNameCharacterLimit: 30
+  roomNameCharacterLimit: 30, // Limit of characters of a room name
+  usernameCharacterLimit: 20, // Limit of characters of a username
 } // options that can be defined and overwrited for each single request);
 
 io.on('connection', (socket, name) => {});
@@ -54,8 +55,8 @@ socket.on("deleteRoom", (options) => {
 ```js
 socket.on("getRoom", (options) => {
   Chat.rooms({
-    messageLimit: 300 // other options you can use to overwrite the options of the class
-  }).get(socket.id, options, { messageLimit: 100 } // this options can overwrite the other options);
+    // other options you can use to overwrite the options of the class, but there are currently no
+  }).get(socket.id, options, { // this options can overwrite the other options, but there are currently no });
 });
 ```
 
