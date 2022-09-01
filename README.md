@@ -12,7 +12,8 @@ const socket.io-chat = require('socket.io-chat');
 const Chat = new socket.io-chat.Chat({
   file: "./chat.json"
 } // options that always will be the same, {
-  messageLimit: 200, // Limit of characters of a message
+  messageCharacterLimit: 200, // Limit of characters of a message
+  roomNameCharacterLimit: 30
 } // options that can be defined and overwrited for each single request);
 
 io.on('connection', (socket, name) => {});
@@ -26,8 +27,8 @@ Unlimited
 ```js
 socket.on("createRoom", (options) => {
   Chat.rooms({
-    roomNameLimit: 300 // other options you can use to overwrite the options of the class
-  }).create(socket.id, options, { messageLimit: 100 } // this options can overwrite the other options);
+    roomNameCharacterLimit: 50 // other options you can use to overwrite the options of the class
+  }).create(socket.id, options, { roomNameCharacterLimit: 40 } // this options can overwrite the other options);
 });
 ```
 
@@ -35,8 +36,8 @@ socket.on("createRoom", (options) => {
 ```js
 socket.on("editRoom", (options) => {
   Chat.rooms({
-    roomNameLimit: 300 // other options you can use to overwrite the options of the class
-  }).edit(socket.id, options, { messageLimit: 100 } // this options can overwrite the other options);
+    roomNameCharacterLimit: 50 // other options you can use to overwrite the options of the class
+  }).edit(socket.id, options, { roomNameCharacterLimit: 40 } // this options can overwrite the other options);
 });
 ```
 
@@ -44,8 +45,8 @@ socket.on("editRoom", (options) => {
 ```js
 socket.on("deleteRoom", (options) => {
   Chat.rooms({
-    // other options you can use to overwrite the options of the class, in but there are not 
-  }).delete(socket.id, options, { messageLimit: 100 } // this options can overwrite the other options);
+    // other options you can use to overwrite the options of the class, but there are currently no 
+  }).delete(socket.id, options, { // this options can overwrite the other options, but there are currently no  });
 });
 ```
 
