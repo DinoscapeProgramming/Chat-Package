@@ -23,6 +23,10 @@ Unlimited
 ### Create Room
 ```js
 socket.on("createRoom", (options) => {
-  Chat.rooms().create(options);
+  Chat.rooms({
+    messageLimit: 300 // other options you can use to overwrite the options of the class
+  }).create(socket.id, options, { messageLimit: 100 } // this options can overwrite the other options);
 });
 ```
+
+
