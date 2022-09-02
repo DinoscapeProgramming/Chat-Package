@@ -1,5 +1,5 @@
 function defaultFunction(socket, name) { 
-  ["createRoom", "editRoom", "deleteRoom", "getRoom", "allRooms", "joinRoom", "leaveRoom", "sendMessage", "editMessage", "deleteMessage", "createUser"].forEach((action) => {
+  ["createRoom", "editRoom", "deleteRoom", "getRoom", "allRooms", "joinRoom", "leaveRoom", "sendMessage", "editMessage", "deleteMessage", "createUser", "editUser"].forEach((action) => {
     socket.on(action, (options) => {
       chat[action](socket.id, options).then((result) => {
         socket.emit(socket.id, result);
