@@ -24,6 +24,12 @@ io.on('connection', (socket, name) => {});
 #### Message Limit
 Unlimited
 
+#### Room Name Character Limit
+Unlimited
+
+#### Username Character Limit
+Unlimited
+
 ### Create Room
 ```js
 socket.on("createRoom", (options) => {
