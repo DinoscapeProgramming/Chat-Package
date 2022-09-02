@@ -5,7 +5,7 @@ FIXME:
 
 const fs = require('fs');
 const crypto = require('crypto');
-const { defaultFunction } = require("./src/example.js");
+const { defaultFunction } = require("./example.js");
 
 function readFile() {
   return new Promise((resolve, reject) => {
