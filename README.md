@@ -60,6 +60,15 @@ socket.on("getRoom", (options) => {
 });
 ```
 
+### All Rooms
+```js
+socket.on("allRooms", (options) => {
+  Chat.rooms({
+    // other options you can use to overwrite the options of the class, but there are currently no
+  }).all(socket.id, options, { // this options can overwrite the other options, but there are currently no });
+});
+```
+
 ### Send Message
 ```js
 socket.on("sendMessage", (options) => {
@@ -91,6 +100,42 @@ socket.on("deleteMessage", (options) => {
 ```js
 socket.on("getMessage", (options) => {
   Chat.messages({
+    // other options you can use to overwrite the options of the class, but there are currently no
+  }).get(socket.id, options, { // this options can overwrite the other options, but there are currently no });
+});
+```
+
+### Create User
+```js
+socket.on("createUser", (options) => {
+  Chat.users({
+    usernameCharacterLimit: 15 // other options you can use to overwrite the options of the class
+  }).create(socket.id, options, { usernameCharacterLimit: 25 } // this options can overwrite the other options);
+});
+```
+
+### Edit User
+```js
+socket.on("editUser", (options) => {
+  Chat.users({
+    usernameCharacterLimit: 15 // other options you can use to overwrite the options of the class
+  }).edit(socket.id, options, { usernameCharacterLimit: 25 } // this options can overwrite the other options);
+});
+```
+
+### Delete User
+```js
+socket.on("deleteUser", (options) => {
+  Chat.users({
+    // other options you can use to overwrite the options of the class, but there are currently no 
+  }).delete(socket.id, options, { // this options can overwrite the other options, but there are currently no  });
+});
+```
+
+### Get Room
+```js
+socket.on("getUser", (options) => {
+  Chat.users({
     // other options you can use to overwrite the options of the class, but there are currently no
   }).get(socket.id, options, { // this options can overwrite the other options, but there are currently no });
 });
