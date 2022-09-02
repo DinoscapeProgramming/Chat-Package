@@ -142,7 +142,7 @@ socket.on("getUser", (options) => {
 ```
 
 ## Functions
-```json
+```js
 [
   isURL,
   configRooms,
@@ -182,7 +182,7 @@ socket.on("getUser", (options) => {
 ```
 
 ## Classes
-```json
+```js
 [
   Chat,
   RoomManager,
