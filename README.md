@@ -8,8 +8,8 @@ const express = require('express');
 const app = express();
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
-const socket-io-chat = require('socket.io-chat');
-const Chat = new socket-io-chat.Chat(app, {
+const socketChat = require('socket.io-chat');
+const Chat = new socketChat.Chat(app, {
   file: "./chat.json"
 } // options that always will be the same, {
   messageCharacterLimit: 200, // Limit of characters of a message
