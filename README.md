@@ -147,6 +147,12 @@ socket.on("getUser", (options) => {
 <script src="/socket.io-chat/socket.io-chat.js">
 ```
 
+### Configuration
+```js
+const socket = io();
+const chat new Chat(socket);
+```
+
 ### Create Room
 ```js
 Chat.rooms().create(options);
