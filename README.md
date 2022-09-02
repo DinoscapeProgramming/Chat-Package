@@ -132,7 +132,7 @@ socket.on("deleteUser", (options) => {
 });
 ```
 
-### Get Room
+### Get User
 ```js
 socket.on("getUser", (options) => {
   Chat.users({
@@ -145,6 +145,71 @@ socket.on("getUser", (options) => {
 ### Setup
 ```html
 <script src="/socket.io-chat/socket.io-chat.js">
+```
+
+### Create Room
+```js
+Chat.rooms().create(options);
+```
+
+### Edit Room
+```js
+Chat.rooms().edit(options);
+```
+
+### Delete Room
+```js
+Chat.rooms().delete(options);
+```
+
+### Get Room
+```js
+Chat.rooms().get(options);
+```
+
+### All Rooms
+```js
+Chat.rooms().all();
+```
+
+### Send Message
+```js
+Chat.messages().send(options);
+```
+
+### Edit Message
+```js
+Chat.messages().edit(options);
+```
+
+### Delete Message
+```js
+Chat.messages().delete(options);
+```
+
+### Get Message
+```js
+Chat.messages().get(options);
+```
+
+### Create User
+```js
+Chat.users().create(options);
+```
+
+### Edit User
+```js
+Chat.users().edit(options);
+```
+
+### Delete User
+```js
+Chat.users().delete(options);
+```
+
+### Get User
+```js
+Chat.users().get(options);
 ```
 
 ## Functions
