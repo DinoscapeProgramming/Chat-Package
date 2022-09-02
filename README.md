@@ -178,3 +178,28 @@ editUserSync
 deleteUserSync
 getUserSync
 ```
+
+## Classes
+```
+Chat
+RoomManager
+MessageManager
+UserManager
+UtilManager
+FunctionManager
+```
+
+## Types
+```json
+{
+  "Types": {
+    "Managers": {
+      "Rooms": "rooms",
+      "Messages": "messages",
+      "Users": "users",
+      "Util": "util",
+      "Functions": "functions"
+    }
+  }
+}
+```
