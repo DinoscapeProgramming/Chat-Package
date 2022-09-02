@@ -63,16 +63,25 @@ socket.on("getRoom", (options) => {
 ### Send Message
 ```js
 socket.on("sendMessage", (options) => {
-  Chat.rooms({
+  Chat.messages({
     messageCharacterLimit: 20 // other options you can use to overwrite the options of the class
   }).send(socket.id, options, { messageCharacterLimit: 15 // this options can overwrite the other options });
+});
+```
+
+### Edit Message
+```js
+socket.on("editMessage", (options) => {
+  Chat.messages({
+    messageCharacterLimit: 20 // other options you can use to overwrite the options of the class
+  }).edit(socket.id, options, { messageCharacterLimit: 15 // this options can overwrite the other options });
 });
 ```
 
 ### Delete Message
 ```js
 socket.on("deleteMessage", (options) => {
-  Chat.rooms({
+  Chat.messages({
     // other options you can use to overwrite the options of the class, but there are currently no
   }).delete(socket.id, options, { // this options can overwrite the other options, but there are currently no });
 });
