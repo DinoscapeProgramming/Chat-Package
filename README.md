@@ -144,8 +144,8 @@ socket.on("getUser", (options) => {
 ## HTML Client Side Documentation
 ### Setup
 ```html
-<script defer src="/socket.io/socket.io.js">
-<script defer src="/socket.io-chat/socket.io-chat.js">
+<script src="/socket.io/socket.io.js">
+<script src="/socket.io-chat/socket.io-chat.js">
 ```
 
 ## Functions
