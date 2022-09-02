@@ -86,3 +86,12 @@ socket.on("deleteMessage", (options) => {
   }).delete(socket.id, options, { // this options can overwrite the other options, but there are currently no });
 });
 ```
+
+### Get Message
+```js
+socket.on("getMessage", (options) => {
+  Chat.messages({
+    // other options you can use to overwrite the options of the class, but there are currently no
+  }).get(socket.id, options, { // this options can overwrite the other options, but there are currently no });
+});
+```
