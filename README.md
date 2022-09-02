@@ -143,50 +143,54 @@ socket.on("getUser", (options) => {
 
 ## Functions
 ```
-isURL
-configRooms
-createRoom
-editRoom
-deleteRoom
-getRoom
-allRooms
-joinRoom
-leaveRoom
-sendMessage
-editMessage
-deleteMessage
-getMessage
-createUser
-editUser
-deleteUser
-getUser
-isURLSync
-configRoomsSync
-createRoomSync
-editRoomSync
-deleteRoomSync
-getRoomSync
-allRoomsSync
-joinRoomSync
-leaveRoomSync
-sendMessageSync
-editMessageSync
-deleteMessageSync
-getMessageSync
-createUserSync
-editUserSync
-deleteUserSync
-getUserSync
+[
+  isURL,
+  configRooms,
+  createRoom,
+  editRoom,
+  deleteRoom,
+  getRoom,
+  allRooms,
+  joinRoom,
+  leaveRoom,
+  sendMessage,
+  editMessage,
+  deleteMessage,
+  getMessage,
+  createUser,
+  editUser,
+  deleteUser,
+  getUser,
+  isURLSync,
+  configRoomsSync,
+  createRoomSync,
+  editRoomSync,
+  deleteRoomSync,
+  getRoomSync,
+  allRoomsSync,
+  joinRoomSync,
+  leaveRoomSync,
+  sendMessageSync,
+  editMessageSync,
+  deleteMessageSync,
+  getMessageSync,
+  createUserSync,
+  editUserSync,
+  deleteUserSync,
+  getUserSync
+]
 ```
 
 ## Classes
 ```
-Chat
-RoomManager
-MessageManager
-UserManager
-UtilManager
-FunctionManager
+[
+  Chat,
+  RoomManager,
+  MessageManager,
+  UserManager,
+  UtilManager,
+  FunctionManager
+]
 ```
 
 ## Types
