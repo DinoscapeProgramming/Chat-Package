@@ -1,6 +1,15 @@
 # Chat Package
 A package you can use to create a Chat with express and socket.io
 
+## Create a database
+Create a file with this json content in it
+```json
+{
+  "users": {},
+  "rooms": {}
+}
+```
+
 ## Class Documentation
 ### Setup
 ```js
