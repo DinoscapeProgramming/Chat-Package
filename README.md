@@ -44,8 +44,8 @@ Unlimited
 socket.on("createRoom", (options) => {
   const result = Chat.rooms({
     roomNameCharacterLimit: 50 // other options you can use to overwrite the options of the class
-  }).create(socket.id, options, { roomNameCharacterLimit: 40 } // this options can overwrite the other options);
-  socket.emit(socket.id, result);
+  }).create(socket.id, options, { roomNameCharacterLimit: 40 /* this options can overwrite the other options*/ });
+  socket.emit(result.action, result);
 });
 ```
 
@@ -54,8 +54,8 @@ socket.on("createRoom", (options) => {
 socket.on("editRoom", (options) => {
   const result = Chat.rooms({
     roomNameCharacterLimit: 50 // other options you can use to overwrite the options of the class
-  }).edit(socket.id, options, { roomNameCharacterLimit: 40 } // this options can overwrite the other options);
-  socket.emit(socket.id, result);
+  }).edit(socket.id, options, { roomNameCharacterLimit: 40 /* this options can overwrite the other options */ });
+  socket.emit(result.action, result);
 });
 ```
 
@@ -64,8 +64,8 @@ socket.on("editRoom", (options) => {
 socket.on("deleteRoom", (options) => {
   const result = Chat.rooms({
     // other options you can use to overwrite the options of the class, but there are currently no 
-  }).delete(socket.id, options, { // this options can overwrite the other options, but there are currently no  });
-  socket.emit(socket.id, result);
+  }).delete(socket.id, options, { /* this options can overwrite the other options, but there are currently no */  });
+  socket.emit(result.action, result);
 });
 ```
 
@@ -74,7 +74,7 @@ socket.on("deleteRoom", (options) => {
 socket.on("getRoom", (options) => {
   const result = Chat.rooms({
     // other options you can use to overwrite the options of the class, but there are currently no
-  }).get(socket.id, options, { // this options can overwrite the other options, but there are currently no });
+  }).get(socket.id, options, { /* this options can overwrite the other options, but there are currently no */ });
   socket.emit(socket.id, result);
 });
 ```
@@ -84,7 +84,7 @@ socket.on("getRoom", (options) => {
 socket.on("allRooms", (options) => {
   const result = Chat.rooms({
     // other options you can use to overwrite the options of the class, but there are currently no
-  }).all(socket.id, options, { // this options can overwrite the other options, but there are currently no });
+  }).all(socket.id, options, { /* this options can overwrite the other options, but there are currently no */ });
   socket.emit(socket.id, result);
 });
 ```
@@ -94,7 +94,7 @@ socket.on("allRooms", (options) => {
 socket.on("sendMessage", (options) => {
   const result = Chat.messages({
     messageCharacterLimit: 20 // other options you can use to overwrite the options of the class
-  }).send(socket.id, options, { messageCharacterLimit: 15 // this options can overwrite the other options });
+  }).send(socket.id, options, { messageCharacterLimit: 15 /* this options can overwrite the other options */ });
   socket.emit(socket.id, result);
 });
 ```
@@ -104,7 +104,7 @@ socket.on("sendMessage", (options) => {
 socket.on("editMessage", (options) => {
   const result = Chat.messages({
     messageCharacterLimit: 20 // other options you can use to overwrite the options of the class
-  }).edit(socket.id, options, { messageCharacterLimit: 15 // this options can overwrite the other options });
+  }).edit(socket.id, options, { messageCharacterLimit: 15 /* this options can overwrite the other options */ });
   socket.emit(socket.id, result);
 });
 ```
@@ -114,7 +114,7 @@ socket.on("editMessage", (options) => {
 socket.on("deleteMessage", (options) => {
   const result = Chat.messages({
     // other options you can use to overwrite the options of the class, but there are currently no
-  }).delete(socket.id, options, { // this options can overwrite the other options, but there are currently no });
+  }).delete(socket.id, options, { /* this options can overwrite the other options, but there are currently no */ });
   socket.emit(socket.id, result);
 });
 ```
@@ -124,7 +124,7 @@ socket.on("deleteMessage", (options) => {
 socket.on("getMessage", (options) => {
   const result = Chat.messages({
     // other options you can use to overwrite the options of the class, but there are currently no
-  }).get(socket.id, options, { // this options can overwrite the other options, but there are currently no });
+  }).get(socket.id, options, { /* this options can overwrite the other options, but there are currently no */ });
   socket.emit(socket.id, result);
 });
 ```
@@ -134,7 +134,7 @@ socket.on("getMessage", (options) => {
 socket.on("createUser", (options) => {
   const result = Chat.users({
     usernameCharacterLimit: 15 // other options you can use to overwrite the options of the class
-  }).create(socket.id, options, { usernameCharacterLimit: 25 } // this options can overwrite the other options);
+  }).create(socket.id, options, { usernameCharacterLimit: 25 } /* this options can overwrite the other options */);
   socket.emit(socket.id, result);
 });
 ```
@@ -144,7 +144,7 @@ socket.on("createUser", (options) => {
 socket.on("editUser", (options) => {
   const result = Chat.users({
     usernameCharacterLimit: 15 // other options you can use to overwrite the options of the class
-  }).edit(socket.id, options, { usernameCharacterLimit: 25 } // this options can overwrite the other options);
+  }).edit(socket.id, options, { usernameCharacterLimit: 25 } /* this options can overwrite the other options */);
   socket.emit(socket.id, result);
 });
 ```
@@ -154,7 +154,7 @@ socket.on("editUser", (options) => {
 socket.on("deleteUser", (options) => {
   const result = Chat.users({
     // other options you can use to overwrite the options of the class, but there are currently no 
-  }).delete(socket.id, options, { // this options can overwrite the other options, but there are currently no  });
+  }).delete(socket.id, options, { /* this options can overwrite the other options, but there are currently no */ });
   socket.emit(socket.id, result);
 });
 ```
@@ -164,7 +164,7 @@ socket.on("deleteUser", (options) => {
 socket.on("getUser", (options) => {
   const result = Chat.users({
     // other options you can use to overwrite the options of the class, but there are currently no
-  }).get(socket.id, options, { // this options can overwrite the other options, but there are currently no });
+  }).get(socket.id, options, { /* this options can overwrite the other options, but there are currently no */ });
   socket.emit(socket.id, result);
 });
 ```
